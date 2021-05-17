@@ -6,8 +6,7 @@ public class Patient extends User {
 	private String bloodType;
 
 	Patient (String name, String email) {
-		this.name = name;
-		this.email = email;
+		super(name, email);
 	}
 
 	public String getBirthday() {
