@@ -40,4 +40,10 @@ public class Patient extends User {
 	public void setBloodType(String bloodType) {
 		this.bloodType = bloodType;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() +
+				"\nAge: " + birthday + "\n Weight: " +getWeight()+ "\n Height"+getHeight()+"\nBlood"+ bloodType;
+	}
 }
