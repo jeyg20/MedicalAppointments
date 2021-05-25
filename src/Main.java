@@ -9,10 +9,10 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
 
-        Doctor myDoctor = new Doctor("Anahí Salgado", "Pediatria");
-        myDoctor.addAvailableAppointment(new Date(), "4pm");
-        myDoctor.addAvailableAppointment(new Date(), "10am");
-        myDoctor.addAvailableAppointment(new Date(), "1pm");
+//        Doctor myDoctor = new Doctor("Anahí Salgado", "Pediatria");
+//        myDoctor.addAvailableAppointment(new Date(), "4pm");
+//        myDoctor.addAvailableAppointment(new Date(), "10am");
+//        myDoctor.addAvailableAppointment(new Date(), "1pm");
 
 
         User user = new Patient("Jeison", "jeisson.g8620@gmail.com");
