@@ -67,6 +67,7 @@ public class UIMenu {
                         correctEmail = true;
                         // Get logged user date
                         doctorLogged = d;
+                        UIDoctorMenu.showDoctorMenu();
                     }
 
                 }

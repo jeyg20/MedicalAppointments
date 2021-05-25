@@ -1,7 +1,5 @@
 package model;
 
-import javax.jws.soap.SOAPBinding;
-
 public abstract class User {
 	private int id;
 	private String name;
