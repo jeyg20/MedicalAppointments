@@ -1,3 +1,5 @@
+package model;
+
 public class Patient extends User {
 
 	private String birthday;
@@ -5,7 +7,7 @@ public class Patient extends User {
 	private double height;
 	private String bloodType;
 
-	Patient (String name, String email) {
+	public Patient (String name, String email) {
 		super(name, email);
 	}
 
@@ -45,5 +47,11 @@ public class Patient extends User {
 	public String toString() {
 		return super.toString() +
 				"\nAge: " + birthday + "\n Weight: " +getWeight()+ "\n Height"+getHeight()+"\nBlood"+ bloodType;
+	}
+
+	@Override
+	public void showUserDate() {
+		System.out.println("Seguro: Sanitas");
+		System.out.println("Historial clinico: 2017 - Hoy");
 	}
 }

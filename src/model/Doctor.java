@@ -1,12 +1,20 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor extends User {
     private String speciality;
 
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
-        System.out.println("El nombre del Doctor asignado es: " + name);
+        System.out.println("El nombre del model.Doctor asignado es: " + name);
+    }
+
+    @Override
+    public void showUserDate() {
+        System.out.println("Hospital: Cruz roja");
+        System.out.println("Departamento: Cardiologia");
     }
 
     public String getSpeciality() {
@@ -60,6 +68,11 @@ public class Doctor extends User {
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return super.toString() + "Available Appointments \nDate: " + date + "\nTime: " + time;
         }
     }
 

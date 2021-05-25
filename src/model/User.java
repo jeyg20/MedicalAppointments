@@ -1,6 +1,8 @@
+package model;
+
 import javax.jws.soap.SOAPBinding;
 
-public class User {
+public abstract class User {
 	private int id;
 	private String name;
 	private String email;
@@ -58,7 +60,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User: " + name + ", Email: "+email+
+		return "model.User: " + name + ", Email: "+email+
 				"\nAddress: "+address+". Phone: "+phoneNumber;
 	}
+
+	public abstract void showUserDate();
 }
