@@ -6,17 +6,12 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor extends User {
+    //Atributo
     private String speciality;
+    private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
     public Doctor(String name, String email){
-        super(name, email);
-        System.out.println("El nombre del model.Doctor asignado es: " + name);
-    }
-
-    @Override
-    public void showUserDate() {
-        System.out.println("Hospital: Cruz roja");
-        System.out.println("Departamento: Cardiologia");
+        super(name,email);
     }
 
     public String getSpeciality() {
@@ -28,16 +23,24 @@ public class Doctor extends User {
     }
 
 
-    // Array list for creation of appointments
-    ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+
     public void addAvailableAppointment(String date, String time){
-
-
         availableAppointments.add(new Doctor.AvailableAppointment(date,time));
     }
 
     public ArrayList<AvailableAppointment> getAvailableAppointments(){
         return availableAppointments;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: " + speciality + "\nAvailable: " + availableAppointments.toString();
+    }
+
+    @Override
+    public void showUserDate() {
+        System.out.println("Empleado del Hospital: CRuz Roja");
+        System.out.println("Departamento: Cancerología");
     }
 
     public static class AvailableAppointment{
@@ -63,14 +66,15 @@ public class Doctor extends User {
             this.id = id;
         }
 
-        public Date getDate() {
+        public Date getDate(String DATE) {
             return date;
         }
 
-        // string DATE in capitals overload the previous method
-        public String getDate(String DATE) {
+        public String getDate() {
             return format.format(date);
         }
+
+
 
         public void setDate(Date date) {
             this.date = date;
@@ -84,9 +88,10 @@ public class Doctor extends User {
             this.time = time;
         }
 
+
         @Override
         public String toString() {
-            return super.toString() + "Available Appointments \nDate: " + date + "\nTime: " + time;
+            return "Available Appointments \nDate: " +date+ "\nTime: " + time;
         }
     }
 

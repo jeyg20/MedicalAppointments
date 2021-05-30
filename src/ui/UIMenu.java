@@ -28,10 +28,12 @@ public class UIMenu {
             switch (response){
                 case 1:
                     System.out.println("Doctor");
+                    response = 0;
                     userAuth(1);
                     break;
                 case 2:
                     System.out.println("Patient");
+                    response = 0;
                     userAuth(2);
                     break;
                 case 0:
@@ -56,7 +58,6 @@ public class UIMenu {
         patients.add(new Patient("Carlos Sanchez", "Sanchez@gmail.com"));
 
         boolean correctEmail = false;
-
         do {
             System.out.println("Insert your email: ejemplo@ejemplo.com");
             Scanner sc = new Scanner(System.in);
@@ -78,7 +79,7 @@ public class UIMenu {
                         correctEmail = true;
                         // Get logged user date
                         patientLogged = p;
-                        showPatientMenu();
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
